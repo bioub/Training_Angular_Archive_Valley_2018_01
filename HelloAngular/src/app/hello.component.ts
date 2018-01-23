@@ -15,7 +15,8 @@ export class HelloComponent implements OnInit {
 
   public firstName = '';
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
   }

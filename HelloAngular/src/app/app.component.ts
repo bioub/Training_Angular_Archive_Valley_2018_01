@@ -13,11 +13,7 @@ import { Component } from '@angular/core';
     <hr>
     <app-hello-custom (firstNameUpdated)="firstNameUpdatedHandler($event)"></app-hello-custom>
     <hr>
-    <app-dropdown> 
-        <!--
-        [elements]="['Item 1', 'Item 2']"
-        (selected)="selectedHandler($event)"> -->
-        
+    <app-dropdown [elements]="['Show', 'Delete']" (selected)="selectedHandler($event)">
     </app-dropdown>
   `,
   styles: []
@@ -29,7 +25,7 @@ export class AppComponent {
     console.log('FirstName', firstName);
   }
 
-    public selectedHandler(element) {
-        console.log('Selected', element);
-    }
+  public selectedHandler(element) {
+    console.log('Selected', element);
+  }
 }

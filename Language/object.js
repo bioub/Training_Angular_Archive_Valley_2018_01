@@ -74,20 +74,24 @@ function createCoords(x, y, z) {
   };
 }
 
+const createCoordsES6 = (x = 0, y = 0, z = 0) => ({x, y, z});
+
 const coords3d = createCoords(10, 20);
 console.log(coords3d.z); // 0
 
 // c - more than once with methods
 // constructor function
 
-function Contact(firstName) {
-  // arguments, this
-  this.firstName = firstName;
-}
+class Contact {
+  constructor(firstName) {
+    // arguments, this
+    this.firstName = firstName;
+  }
 
-Contact.prototype.hello = function() {
-  return 'Hello my name is ' + this.firstName;
-};
+  hello() {
+    return 'Hello my name is ' + this.firstName;
+  }
+}
 
 const romain = new Contact('Romain');
 console.log(typeof romain); // object

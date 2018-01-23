@@ -1,0 +1,4 @@
+span::before {
+  content: ' > ';
+  display: inline-block;
+}

@@ -1,0 +1,10 @@
+<div class="list-group">
+  <a [routerLink]="[c.id]" routerLinkActive="active"
+     class="list-group-item list-group-item-action"
+     *ngFor="let c of contacts"
+  >
+    {{c.name}}
+  </a>
+</div>
+
+<a [routerLink]="['add']" routerLinkActive="active" class="btn btn-success btn-block mt-3">Add a contact</a>

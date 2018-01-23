@@ -1,0 +1,10 @@
+<div class="row">
+  <div class="col-sm-4">
+    <ab-contacts-list #contactsList="sample"></ab-contacts-list>
+  </div>
+  <div class="col">
+    <router-outlet></router-outlet>
+  </div>
+</div>
+
+<div>{{contactsList.contacts.length}} contacts</div>
